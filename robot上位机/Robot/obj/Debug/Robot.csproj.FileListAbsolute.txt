@@ -1,0 +1,11 @@
+E:\居家机器人\Robot\Robot\bin\Debug\Robot.exe.config
+E:\居家机器人\robot上位机\Robot\bin\Debug\Robot.exe.config
+E:\居家机器人\robot上位机\Robot\bin\Debug\Robot.exe
+E:\居家机器人\robot上位机\Robot\bin\Debug\Robot.pdb
+E:\居家机器人\robot上位机\Robot\obj\Debug\Robot.Form1.resources
+E:\居家机器人\robot上位机\Robot\obj\Debug\Robot.Properties.Resources.resources
+E:\居家机器人\robot上位机\Robot\obj\Debug\Robot.csproj.GenerateResource.Cache
+E:\居家机器人\robot上位机\Robot\obj\Debug\Robot.exe
+E:\居家机器人\robot上位机\Robot\obj\Debug\Robot.pdb
+E:\居家机器人\robot上位机\Robot\obj\Debug\Robot.PortSetting.resources
+E:\居家机器人\robot上位机\Robot\obj\Debug\Robot.csprojResolveAssemblyReference.cache
