@@ -55,6 +55,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.delayTextBox = new System.Windows.Forms.TextBox();
             this.rightRoateTextBox = new System.Windows.Forms.TextBox();
@@ -88,7 +89,49 @@
             this.BTserialPort = new System.IO.Ports.SerialPort(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.steerTextBox0 = new System.Windows.Forms.TextBox();
+            this.steerTextBox1 = new System.Windows.Forms.TextBox();
+            this.steerTextBox2 = new System.Windows.Forms.TextBox();
+            this.steerTextBox3 = new System.Windows.Forms.TextBox();
+            this.steerTextBox4 = new System.Windows.Forms.TextBox();
+            this.steerTextBox5 = new System.Windows.Forms.TextBox();
+            this.steerTextBox6 = new System.Windows.Forms.TextBox();
+            this.steerTextBox7 = new System.Windows.Forms.TextBox();
+            this.steerTextBox8 = new System.Windows.Forms.TextBox();
+            this.steerTextBox9 = new System.Windows.Forms.TextBox();
+            this.steerTextBox10 = new System.Windows.Forms.TextBox();
+            this.steerTextBox11 = new System.Windows.Forms.TextBox();
+            this.steerSendDataButton = new System.Windows.Forms.Button();
+            this.steerInitButton = new System.Windows.Forms.Button();
+            this.steerSaveButton = new System.Windows.Forms.Button();
+            this.steerOpenButton = new System.Windows.Forms.Button();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.steerComboBox = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.registerFunctionButton = new System.Windows.Forms.Button();
+            this.clearFunctionButton = new System.Windows.Forms.Button();
+            this.testFunctionButton = new System.Windows.Forms.Button();
+            this.saveFunctionButton = new System.Windows.Forms.Button();
             this.setGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -96,10 +139,12 @@
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.SuspendLayout();
             // 
             // setButton
@@ -360,14 +405,52 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.groupBox14);
             this.groupBox8.Controls.Add(this.groupBox13);
             this.groupBox8.Controls.Add(this.groupBox12);
-            this.groupBox8.Location = new System.Drawing.Point(348, 8);
+            this.groupBox8.Location = new System.Drawing.Point(6, 14);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(297, 306);
+            this.groupBox8.Size = new System.Drawing.Size(639, 306);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "无线遥控";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.steerOpenButton);
+            this.groupBox13.Controls.Add(this.steerSaveButton);
+            this.groupBox13.Controls.Add(this.steerInitButton);
+            this.groupBox13.Controls.Add(this.steerSendDataButton);
+            this.groupBox13.Controls.Add(this.steerTextBox11);
+            this.groupBox13.Controls.Add(this.steerTextBox10);
+            this.groupBox13.Controls.Add(this.steerTextBox9);
+            this.groupBox13.Controls.Add(this.steerTextBox8);
+            this.groupBox13.Controls.Add(this.steerTextBox7);
+            this.groupBox13.Controls.Add(this.steerTextBox6);
+            this.groupBox13.Controls.Add(this.steerTextBox5);
+            this.groupBox13.Controls.Add(this.steerTextBox4);
+            this.groupBox13.Controls.Add(this.steerTextBox3);
+            this.groupBox13.Controls.Add(this.steerTextBox2);
+            this.groupBox13.Controls.Add(this.steerTextBox1);
+            this.groupBox13.Controls.Add(this.steerTextBox0);
+            this.groupBox13.Controls.Add(this.label17);
+            this.groupBox13.Controls.Add(this.label15);
+            this.groupBox13.Controls.Add(this.label14);
+            this.groupBox13.Controls.Add(this.label13);
+            this.groupBox13.Controls.Add(this.label12);
+            this.groupBox13.Controls.Add(this.label11);
+            this.groupBox13.Controls.Add(this.label10);
+            this.groupBox13.Controls.Add(this.label9);
+            this.groupBox13.Controls.Add(this.label8);
+            this.groupBox13.Controls.Add(this.label7);
+            this.groupBox13.Controls.Add(this.label6);
+            this.groupBox13.Controls.Add(this.label5);
+            this.groupBox13.Location = new System.Drawing.Point(6, 14);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(302, 290);
+            this.groupBox13.TabIndex = 23;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "舵机控制";
             // 
             // groupBox12
             // 
@@ -389,7 +472,7 @@
             this.groupBox12.Controls.Add(this.leftBackButton);
             this.groupBox12.Controls.Add(this.leftStraightButton);
             this.groupBox12.Controls.Add(this.rightStraightButton);
-            this.groupBox12.Location = new System.Drawing.Point(154, 14);
+            this.groupBox12.Location = new System.Drawing.Point(314, 14);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(143, 292);
             this.groupBox12.TabIndex = 22;
@@ -676,14 +759,399 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // groupBox13
+            // label5
             // 
-            this.groupBox13.Location = new System.Drawing.Point(5, 14);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(143, 292);
-            this.groupBox13.TabIndex = 23;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "舵机控制";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "左肩前后：";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(144, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 12);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "左肩左右：";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(10, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 12);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "左肘前后：";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(144, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "左手腕：";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "左爪：";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 119);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 12);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "右肩前后：";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(144, 116);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "右肩左右：";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 150);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 12);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "右肘前后：";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(144, 149);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "右手腕：";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(10, 181);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 12);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "右爪：";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(10, 212);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 12);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "头左右：";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(146, 212);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 12);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "头前后：";
+            // 
+            // steerTextBox0
+            // 
+            this.steerTextBox0.Location = new System.Drawing.Point(78, 17);
+            this.steerTextBox0.Name = "steerTextBox0";
+            this.steerTextBox0.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox0.TabIndex = 13;
+            this.steerTextBox0.Text = "75";
+            // 
+            // steerTextBox1
+            // 
+            this.steerTextBox1.Location = new System.Drawing.Point(212, 17);
+            this.steerTextBox1.Name = "steerTextBox1";
+            this.steerTextBox1.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox1.TabIndex = 14;
+            this.steerTextBox1.Text = "75";
+            // 
+            // steerTextBox2
+            // 
+            this.steerTextBox2.Location = new System.Drawing.Point(78, 48);
+            this.steerTextBox2.Name = "steerTextBox2";
+            this.steerTextBox2.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox2.TabIndex = 15;
+            this.steerTextBox2.Text = "75";
+            // 
+            // steerTextBox3
+            // 
+            this.steerTextBox3.Location = new System.Drawing.Point(212, 48);
+            this.steerTextBox3.Name = "steerTextBox3";
+            this.steerTextBox3.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox3.TabIndex = 16;
+            this.steerTextBox3.Text = "75";
+            // 
+            // steerTextBox4
+            // 
+            this.steerTextBox4.Location = new System.Drawing.Point(78, 75);
+            this.steerTextBox4.Name = "steerTextBox4";
+            this.steerTextBox4.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox4.TabIndex = 17;
+            this.steerTextBox4.Text = "75";
+            // 
+            // steerTextBox5
+            // 
+            this.steerTextBox5.Location = new System.Drawing.Point(78, 108);
+            this.steerTextBox5.Name = "steerTextBox5";
+            this.steerTextBox5.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox5.TabIndex = 18;
+            this.steerTextBox5.Text = "75";
+            // 
+            // steerTextBox6
+            // 
+            this.steerTextBox6.Location = new System.Drawing.Point(212, 107);
+            this.steerTextBox6.Name = "steerTextBox6";
+            this.steerTextBox6.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox6.TabIndex = 19;
+            this.steerTextBox6.Text = "75";
+            // 
+            // steerTextBox7
+            // 
+            this.steerTextBox7.Location = new System.Drawing.Point(78, 140);
+            this.steerTextBox7.Name = "steerTextBox7";
+            this.steerTextBox7.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox7.TabIndex = 20;
+            this.steerTextBox7.Text = "75";
+            // 
+            // steerTextBox8
+            // 
+            this.steerTextBox8.Location = new System.Drawing.Point(212, 140);
+            this.steerTextBox8.Name = "steerTextBox8";
+            this.steerTextBox8.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox8.TabIndex = 21;
+            this.steerTextBox8.Text = "75";
+            // 
+            // steerTextBox9
+            // 
+            this.steerTextBox9.Location = new System.Drawing.Point(78, 175);
+            this.steerTextBox9.Name = "steerTextBox9";
+            this.steerTextBox9.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox9.TabIndex = 22;
+            this.steerTextBox9.Text = "75";
+            // 
+            // steerTextBox10
+            // 
+            this.steerTextBox10.Location = new System.Drawing.Point(78, 208);
+            this.steerTextBox10.Name = "steerTextBox10";
+            this.steerTextBox10.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox10.TabIndex = 23;
+            this.steerTextBox10.Text = "75";
+            // 
+            // steerTextBox11
+            // 
+            this.steerTextBox11.Location = new System.Drawing.Point(212, 208);
+            this.steerTextBox11.Name = "steerTextBox11";
+            this.steerTextBox11.Size = new System.Drawing.Size(63, 21);
+            this.steerTextBox11.TabIndex = 24;
+            this.steerTextBox11.Text = "75";
+            // 
+            // steerSendDataButton
+            // 
+            this.steerSendDataButton.Location = new System.Drawing.Point(235, 252);
+            this.steerSendDataButton.Name = "steerSendDataButton";
+            this.steerSendDataButton.Size = new System.Drawing.Size(61, 29);
+            this.steerSendDataButton.TabIndex = 25;
+            this.steerSendDataButton.Text = "发送数据";
+            this.steerSendDataButton.UseVisualStyleBackColor = true;
+            // 
+            // steerInitButton
+            // 
+            this.steerInitButton.Location = new System.Drawing.Point(148, 252);
+            this.steerInitButton.Name = "steerInitButton";
+            this.steerInitButton.Size = new System.Drawing.Size(80, 29);
+            this.steerInitButton.TabIndex = 26;
+            this.steerInitButton.Text = "初始化数据";
+            this.steerInitButton.UseVisualStyleBackColor = true;
+            // 
+            // steerSaveButton
+            // 
+            this.steerSaveButton.Location = new System.Drawing.Point(79, 252);
+            this.steerSaveButton.Name = "steerSaveButton";
+            this.steerSaveButton.Size = new System.Drawing.Size(62, 29);
+            this.steerSaveButton.TabIndex = 27;
+            this.steerSaveButton.Text = "保存数据";
+            this.steerSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // steerOpenButton
+            // 
+            this.steerOpenButton.Location = new System.Drawing.Point(10, 252);
+            this.steerOpenButton.Name = "steerOpenButton";
+            this.steerOpenButton.Size = new System.Drawing.Size(62, 29);
+            this.steerOpenButton.TabIndex = 28;
+            this.steerOpenButton.Text = "打开数据";
+            this.steerOpenButton.UseVisualStyleBackColor = true;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.saveFunctionButton);
+            this.groupBox14.Controls.Add(this.testFunctionButton);
+            this.groupBox14.Controls.Add(this.clearFunctionButton);
+            this.groupBox14.Controls.Add(this.registerFunctionButton);
+            this.groupBox14.Controls.Add(this.textBox4);
+            this.groupBox14.Controls.Add(this.textBox3);
+            this.groupBox14.Controls.Add(this.textBox2);
+            this.groupBox14.Controls.Add(this.textBox1);
+            this.groupBox14.Controls.Add(this.label21);
+            this.groupBox14.Controls.Add(this.label20);
+            this.groupBox14.Controls.Add(this.label19);
+            this.groupBox14.Controls.Add(this.label18);
+            this.groupBox14.Controls.Add(this.steerComboBox);
+            this.groupBox14.Controls.Add(this.label16);
+            this.groupBox14.Location = new System.Drawing.Point(463, 14);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(170, 292);
+            this.groupBox14.TabIndex = 24;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "动作控制";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(15, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 12);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "舵机选择：";
+            // 
+            // steerComboBox
+            // 
+            this.steerComboBox.FormattingEnabled = true;
+            this.steerComboBox.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"});
+            this.steerComboBox.Location = new System.Drawing.Point(86, 16);
+            this.steerComboBox.Name = "steerComboBox";
+            this.steerComboBox.Size = new System.Drawing.Size(71, 20);
+            this.steerComboBox.TabIndex = 1;
+            this.steerComboBox.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 57);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(77, 12);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "开始占空比：";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(15, 95);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(77, 12);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "结束占空比：";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(15, 132);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(65, 12);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "开始时间：";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(15, 165);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(65, 12);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "结束时间：";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(86, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(70, 21);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(86, 89);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(70, 21);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(86, 129);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(70, 21);
+            this.textBox3.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(86, 162);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(70, 21);
+            this.textBox4.TabIndex = 9;
+            // 
+            // registerFunctionButton
+            // 
+            this.registerFunctionButton.Location = new System.Drawing.Point(17, 201);
+            this.registerFunctionButton.Name = "registerFunctionButton";
+            this.registerFunctionButton.Size = new System.Drawing.Size(63, 32);
+            this.registerFunctionButton.TabIndex = 10;
+            this.registerFunctionButton.Text = "注册动作";
+            this.registerFunctionButton.UseVisualStyleBackColor = true;
+            // 
+            // clearFunctionButton
+            // 
+            this.clearFunctionButton.Location = new System.Drawing.Point(90, 201);
+            this.clearFunctionButton.Name = "clearFunctionButton";
+            this.clearFunctionButton.Size = new System.Drawing.Size(66, 32);
+            this.clearFunctionButton.TabIndex = 11;
+            this.clearFunctionButton.Text = "清空动作";
+            this.clearFunctionButton.UseVisualStyleBackColor = true;
+            // 
+            // testFunctionButton
+            // 
+            this.testFunctionButton.Location = new System.Drawing.Point(17, 250);
+            this.testFunctionButton.Name = "testFunctionButton";
+            this.testFunctionButton.Size = new System.Drawing.Size(63, 32);
+            this.testFunctionButton.TabIndex = 12;
+            this.testFunctionButton.Text = "测试动作";
+            this.testFunctionButton.UseVisualStyleBackColor = true;
+            // 
+            // saveFunctionButton
+            // 
+            this.saveFunctionButton.Location = new System.Drawing.Point(90, 250);
+            this.saveFunctionButton.Name = "saveFunctionButton";
+            this.saveFunctionButton.Size = new System.Drawing.Size(66, 32);
+            this.saveFunctionButton.TabIndex = 13;
+            this.saveFunctionButton.Text = "保存动作";
+            this.saveFunctionButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -714,12 +1182,16 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox8.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -785,6 +1257,49 @@
         private System.Windows.Forms.TextBox rightRoateTextBox;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button steerInitButton;
+        private System.Windows.Forms.Button steerSendDataButton;
+        private System.Windows.Forms.TextBox steerTextBox11;
+        private System.Windows.Forms.TextBox steerTextBox10;
+        private System.Windows.Forms.TextBox steerTextBox9;
+        private System.Windows.Forms.TextBox steerTextBox8;
+        private System.Windows.Forms.TextBox steerTextBox7;
+        private System.Windows.Forms.TextBox steerTextBox6;
+        private System.Windows.Forms.TextBox steerTextBox5;
+        private System.Windows.Forms.TextBox steerTextBox4;
+        private System.Windows.Forms.TextBox steerTextBox3;
+        private System.Windows.Forms.TextBox steerTextBox2;
+        private System.Windows.Forms.TextBox steerTextBox1;
+        private System.Windows.Forms.TextBox steerTextBox0;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button steerSaveButton;
+        private System.Windows.Forms.Button steerOpenButton;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox steerComboBox;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button saveFunctionButton;
+        private System.Windows.Forms.Button testFunctionButton;
+        private System.Windows.Forms.Button clearFunctionButton;
+        private System.Windows.Forms.Button registerFunctionButton;
     }
 }
 
