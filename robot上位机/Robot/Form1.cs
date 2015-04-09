@@ -16,7 +16,7 @@ namespace Robot
 {
     public partial class Form1 : Form
     {
-
+        int displayNum = 0;
         #region/* Serial Port Relative */
 
         private int receiveForm = 1;
@@ -37,6 +37,8 @@ namespace Robot
         {
             InitializeComponent();
             BTserialPort = new SerialPort();
+            BTserialPort.NewLine = "\r\n";
+            //BTserialPort.RtsEnable = true;
             portInfo = new PortInfo(115200, 8, Parity.None, StopBits.One);
             saveFileDialog1 = new SaveFileDialog();
             openFileDialog1 = new OpenFileDialog();
@@ -54,6 +56,7 @@ namespace Robot
         }*/
         private void BTserialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
+
             if (portInfo.Closing) return;//如果正在关闭，忽略操作，直接返回，尽快的完成串口监听线程的一次循环
             try
             {
@@ -102,6 +105,10 @@ namespace Robot
                         //buffer.RemoveAt(0);
                         buffer.RemoveRange(0, 1);
                     }
+                    if (buffer[0] == '#')
+                    {
+                        displayNum = 1;
+                    }
                 }
                 //分析数据
                 if (data_1_catched)
@@ -130,9 +137,11 @@ namespace Robot
                         //直接按ASCII规则转换成字符串
                         builder.Append(Encoding.ASCII.GetString(buf));
                     }
-                    //追加的形式添加到文本框末端，并滚动到最后。
-                    this.dataReceiveTextBox.AppendText(builder.ToString());
-
+                    if(displayNum==0)
+                         //追加的形式添加到文本框末端，并滚动到最后。
+                        this.dataReceiveTextBox.AppendText(builder.ToString());
+                    else if(displayNum==1)
+                        this.functionTextBox.AppendText(builder.ToString());
                 }));
             }
             finally
@@ -250,6 +259,7 @@ namespace Robot
         private void clearReceivebutton_Click(object sender, EventArgs e)
         {
             dataReceiveTextBox.Clear();
+            functionTextBox.Clear();
         }
 
         private void clearSendbutton_Click(object sender, EventArgs e)
@@ -402,6 +412,95 @@ namespace Robot
             else
             {
                 MessageBox.Show("串口未打开，请打开串口!");
+            }
+        }
+        public void steerControlButton_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            string send="$c";
+            string[] steerPWM=new string[12];
+            switch(btn.Name)
+            { 
+                case "steerOpenButton":
+                    break;
+                case "steerSaveButton":
+                    break;
+                case "steerInitButton":
+                    if (BTserialPort.IsOpen)
+                    {
+                        steerTextBox0.Text = "75";
+                        steerTextBox1.Text = "75";
+                        steerTextBox2.Text = "75";
+                        steerTextBox3.Text = "75";
+                        steerTextBox4.Text = "75";
+                        steerTextBox5.Text = "75";
+                        steerTextBox6.Text = "75";
+                        steerTextBox7.Text = "75";
+                        steerTextBox8.Text = "75";
+                        steerTextBox9.Text = "75";
+                        steerTextBox10.Text = "75";
+                        steerTextBox11.Text = "75";
+                        send += "75,75,75,75,75,75,75,75,75,75,75,75#";
+                        BTserialPort.Write(send);
+                    }
+                    else
+                    {
+                        MessageBox.Show("串口未打开，请打开串口!");
+                    }
+                    break;
+                case "steerSendDataButton":
+                    if (BTserialPort.IsOpen)
+                    {
+                        steerPWM[0] = steerTextBox0.Text;
+                        steerPWM[1] = steerTextBox1.Text;
+                        steerPWM[2] = steerTextBox2.Text;
+                        steerPWM[3] = steerTextBox3.Text;
+                        steerPWM[4] = steerTextBox4.Text;
+                        steerPWM[5] = steerTextBox5.Text;
+                        steerPWM[6] = steerTextBox6.Text;
+                        steerPWM[7] = steerTextBox7.Text;
+                        steerPWM[8] = steerTextBox8.Text;
+                        steerPWM[9] = steerTextBox9.Text;
+                        steerPWM[10] = steerTextBox10.Text;
+                        steerPWM[11] = steerTextBox11.Text;
+                        send = send + steerPWM[0] + "," + steerPWM[1] + ","+ steerPWM[2] + "," + steerPWM[3] + "," + steerPWM[4]
+                            + "," + steerPWM[5] + "," + steerPWM[6] + "," + steerPWM[7] + "," + steerPWM[8] + "," + steerPWM[9]
+                            + "," + steerPWM[10] + "," + steerPWM[11] + "#";
+                        BTserialPort.Write(send);
+                    }
+                    else
+                    {
+                        MessageBox.Show("串口未打开，请打开串口!");
+                    }
+                    break;
+                default: break;
+            }
+        }
+        public void functionControlButton_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            string send = "$s";
+            switch (btn.Name)
+            {
+                case "registerFunctionButton":
+                    break;
+                case "displaySteerButton":
+                    send += "@#";
+                    BTserialPort.Write(send);
+                    break;
+                case "clearFunctionButton":
+                    send += "i#";
+                    BTserialPort.Write(send);
+                    break;
+                case "testFunctionButton":
+                    send += "t#";
+                    BTserialPort.Write(send);
+                    break;
+                case "saveFunctionButton":
+                    break;
+                case "openFunctionButton":
+                    break;
+                default: break;
             }
         }
         private void freshPortButton_Click(object sender, EventArgs e)
