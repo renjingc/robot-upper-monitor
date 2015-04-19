@@ -109,6 +109,10 @@ namespace Robot
                     {
                         displayNum = 1;
                     }
+                    else
+                    {
+                        displayNum = 0;
+                    }
                 }
                 //分析数据
                 if (data_1_catched)
